@@ -9,8 +9,10 @@
   },
   "scripts": {
     "build": "strapi build",
+    "commit:lint": "commitlint",
     "develop": "strapi develop",
     "prepare": "husky",
+    "release": "semantic-release --dry-run --no-ci",
     "start": "strapi start",
     "strapi": "strapi"
   },
@@ -38,6 +40,7 @@
     "husky": "9.0.11",
     "semantic-release": "23.0.8"
   },
+  "packageManager": "yarn@4.1.1",
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
