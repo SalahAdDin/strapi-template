@@ -1,34 +1,40 @@
 {
   "name": "strapi-template",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "@strapi/strapi": "5.0.0-beta.5",
-    "@strapi/plugin-users-permissions": "5.0.0-beta.5",
-    "@strapi/plugin-cloud": "5.0.0-beta.5",
-    "better-sqlite3": "9.4.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "5.3.3"
-  },
+  "license": "MIT",
   "author": {
     "name": "A Strapi developer"
   },
-  "strapi": {
-    "uuid": "6e3df431-f821-4bb9-8f0d-dd32c4b2d686"
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "prepare": "husky",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.0.0-beta.5",
+    "@strapi/plugin-users-permissions": "5.0.0-beta.5",
+    "@strapi/strapi": "5.0.0-beta.5",
+    "better-sqlite3": "9.4.3",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-router-dom": "6.0.0",
+    "styled-components": "5.3.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@commitlint/types": "19.0.3",
+    "husky": "9.0.11"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "6e3df431-f821-4bb9-8f0d-dd32c4b2d686"
+  }
 }
