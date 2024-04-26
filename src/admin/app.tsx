@@ -1,4 +1,4 @@
-import type { StrapiApp } from '@strapi/strapi/admin';
+import type { StrapiApp } from "@strapi/strapi/admin";
 
 export default {
   config: {
@@ -8,7 +8,8 @@ export default {
       // 'cs',
       // 'de',
       // 'dk',
-      // 'es',
+      "en",
+      "es",
       // 'he',
       // 'id',
       // 'it',
@@ -24,7 +25,7 @@ export default {
       // 'sk',
       // 'sv',
       // 'th',
-      // 'tr',
+      "tr",
       // 'uk',
       // 'vi',
       // 'zh-Hans',
