@@ -1,12 +1,26 @@
-# 🚀 Getting started with Strapi
+# 🚀 Getting started with Strapi Template
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-### `develop`
+## Architecture
+
+Our template brings an architecture based on four models:
+
+- Category
+- Tags
+- Profile
+- Post
+
+The following is the entity relationship schema:
+![Template's Entity Relationship graphic.](./StrapiTemplateERGraph.png)
+
+Profile is intended to be also an extension of the Strapi's user model. It is up to the developer to chose between `users-permission`, Strapi's external users, and `admin`, Strapi's admin panel users. If the developer decides by `admin`, it can manage to auto fill the `author` field based on the current session user's author.
+
+## `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
-```
+```shell
 npm run develop
 # or
 yarn develop
@@ -16,7 +30,7 @@ yarn develop
 
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
-```
+```shell
 npm run start
 # or
 yarn start
@@ -26,7 +40,7 @@ yarn start
 
 Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
-```
+```shell
 npm run build
 # or
 yarn build
