@@ -451,6 +451,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'Category';
+    description: 'Organize your content by categories.';
   };
   options: {
     draftAndPublish: false;
@@ -510,7 +511,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     singularName: 'post';
     pluralName: 'posts';
     displayName: 'Post';
-    description: '';
+    description: "Write your's website posts.";
   };
   options: {
     draftAndPublish: true;
@@ -576,6 +577,7 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
     singularName: 'profile';
     pluralName: 'profiles';
     displayName: 'Profile';
+    description: 'Give a profile to your users.';
   };
   options: {
     draftAndPublish: false;

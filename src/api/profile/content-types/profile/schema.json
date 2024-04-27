@@ -4,7 +4,8 @@
   "info": {
     "singularName": "profile",
     "pluralName": "profiles",
-    "displayName": "Profile"
+    "displayName": "Profile",
+    "description": "Give a profile to your users."
   },
   "options": {
     "draftAndPublish": false
@@ -58,9 +59,7 @@
       "required": true
     },
     "photo": {
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
       "pluginOptions": {

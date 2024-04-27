@@ -5,7 +5,7 @@
     "singularName": "post",
     "pluralName": "posts",
     "displayName": "Post",
-    "description": ""
+    "description": "Write your's website posts."
   },
   "options": {
     "draftAndPublish": true
@@ -39,10 +39,7 @@
       "maxLength": 5
     },
     "hero": {
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
       "pluginOptions": {
