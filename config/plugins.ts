@@ -1,7 +1,32 @@
 export default ({ env }) => ({
   /*   seo: {
     enabled: true,
-  }, */
+  },
+  "preview-button": {
+    config: {
+      contentTypes: [
+        {
+          uid: "api::post.post",
+          draft: {
+            url: `${env("PUBLIC_DOMAIN_URL")}/api/preview`,
+            query: {
+              type: "post",
+              locale: "{locale}",
+              slug: "{slug}",
+              secret: env("STRAPI_PREVIEW_SECRET", ""),
+            },
+            openTarget: "_blank",
+          },
+          published: {
+            // can add extra segment, like "blog", when required
+            url: `${env("PUBLIC_DOMAIN_URL")}/{locale}/{slug}`,
+            openTarget: "_blank",
+          },
+        },
+      ],
+    },
+  },
+  */
   upload: {
     config: {
       provider: "cloudinary",
