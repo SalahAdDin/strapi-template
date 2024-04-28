@@ -13,6 +13,7 @@
     "develop": "strapi develop",
     "prepare": "husky",
     "release": "semantic-release --dry-run --no-ci",
+    "sitemap": "strapi-sitemap",
     "start": "strapi start",
     "strapi": "strapi"
   },

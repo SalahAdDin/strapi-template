@@ -27,6 +27,15 @@ export default ({ env }) => ({
     },
   },
   */
+  sitemap: {
+    enabled: true,
+    config: {
+      cron: "* * * * 7",
+      xsl: true,
+      autoGenerate: false,
+      caching: true,
+    },
+  },
   upload: {
     config: {
       provider: "cloudinary",
