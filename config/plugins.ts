@@ -1,6 +1,18 @@
 export default ({ env }) => ({
-  /*   seo: {
+  /*
+  navigation: {
     enabled: true,
+    config: {
+      allowedLevels: 2,
+      contentTypes: ["api::post.post"],
+      contentTypesNameFields: {
+        "api::post.post": ["title"],
+      },
+      excludedContentTypes: ["plugins::", "strapi"],
+      pathDefaultFields: {
+        "api::post.post": ["slug"],
+      },
+    },
   },
   "preview-button": {
     config: {
@@ -26,7 +38,9 @@ export default ({ env }) => ({
       ],
     },
   },
-  */
+  seo: {
+    enabled: true,
+  },
   sitemap: {
     enabled: true,
     config: {
@@ -35,7 +49,7 @@ export default ({ env }) => ({
       autoGenerate: false,
       caching: true,
     },
-  },
+  }, */
   upload: {
     config: {
       provider: "cloudinary",
