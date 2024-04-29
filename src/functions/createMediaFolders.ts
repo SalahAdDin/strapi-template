@@ -17,33 +17,40 @@ const createFoldersRecursively = async (path: string, strapi: Core.Strapi) => {
   for (const part of parts) {
     const pathName = `${parent?.name ?? ""}/${part}`;
 
-    const existingFolder = await strapi
-      .documents("plugin::upload.folder")
-      .findMany({
-        filters: {
-          name: part,
-          parent: parent?.id ?? null,
-        },
-      });
-
-    if (existingFolder.length === 0) {
-      const folder = await strapi
-        .plugin("upload")
-        .service("folder")
-        .create({
-          name: part,
-          parent: parent ? parent.id : null,
+    try {
+      const existingFolder = await strapi
+        .documents("plugin::upload.folder")
+        .findMany({
+          filters: {
+            name: part,
+            parent: parent?.id ?? null,
+          },
         });
 
-      console.log(`Folder '${pathName}' created successfully.`);
+      if (existingFolder.length === 0) {
+        const folder = await strapi
+          .plugin("upload")
+          .service("folder")
+          .create({
+            name: part,
+            parent: parent ? parent.id : null,
+          });
 
-      parent = folder;
-    } else {
-      console.log(`Folder '${pathName}' already exists.`);
+        console.log(`Folder '${pathName}' created successfully.`);
 
-      parent = Array.isArray(existingFolder)
-        ? existingFolder.pop()
-        : existingFolder;
+        parent = folder;
+      } else {
+        console.log(`Folder '${pathName}' already exists.`);
+
+        parent = Array.isArray(existingFolder)
+          ? existingFolder.pop()
+          : existingFolder;
+      }
+    } catch (error) {
+      console.error(
+        `Error creating folder ${pathName} in Strapi media library:\n`,
+        error
+      );
     }
   }
 };
@@ -51,13 +58,9 @@ const createFoldersRecursively = async (path: string, strapi: Core.Strapi) => {
 export const createMediaFolders = async (strapi: Core.Strapi) => {
   console.info("\nCreating media folders based on given paths.\n");
 
-  try {
-    for (const path of paths) {
-      await createFoldersRecursively(path, strapi);
-    }
-  } catch (error) {
-    console.error("Error creating folder in Strapi media library:\n", error);
-  } finally {
-    console.info("\nMedia folders have been set up!");
+  for (const path of paths) {
+    await createFoldersRecursively(path, strapi);
   }
+
+  console.info("\nMedia folders have been set up!");
 };
