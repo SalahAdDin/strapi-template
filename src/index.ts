@@ -1,5 +1,6 @@
 import { Core } from "@strapi/strapi";
-import { createMediaFolders } from "../config/functions/createMediaFolders";
+import { createMediaFolders } from "./functions/createMediaFolders";
+import { addLocales } from "./functions/addLocales";
 
 export default {
   /**
@@ -19,5 +20,6 @@ export default {
    */
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await createMediaFolders(strapi);
+    await addLocales(strapi);
   },
 };
