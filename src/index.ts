@@ -20,6 +20,6 @@ export default {
    */
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await createMediaFolders(strapi);
-    await addLocales(strapi);
+    // await addLocales(strapi);
   },
 };
