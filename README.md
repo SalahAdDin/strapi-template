@@ -1,6 +1,7 @@
 # 🚀 Getting started with Strapi Template
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+
 ### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
@@ -56,6 +57,7 @@ We also recommend to check the following plugins when it is required:
 - [Cloudflare Pages](https://github.com/sarhugo/strapi-plugin-cloudflare-pages): A plugin to easily trigger Cloudflare Pages builds from Strapi. Since [we can use webhooks to keep the Vercel deployed pages updated](https://strapi.io/blog/how-to-create-an-ssg-static-site-generation-application-with-strapi-webhooks-and-nextjs), we don't recomment any plugin for Vercel.
 - [Meilisearch](https://github.com/meilisearch/strapi-plugin-meilisearch): A strapi plugin to add your collections to Meilisearch, making easier to add searching features to your frontend. We were unable to find a plugin for Typesense, another powerful search engine; [we asked for it](https://github.com/typesense/typesense/issues/1691) on the repository.
 All plugins listed here don't currently support Strapi 5 yet.
+
 ## ⚙️ Deployment
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
