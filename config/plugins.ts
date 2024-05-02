@@ -1,5 +1,4 @@
 export default ({ env }) => ({
-  /*
   navigation: {
     enabled: true,
     config: {
@@ -49,7 +48,7 @@ export default ({ env }) => ({
       autoGenerate: false,
       caching: true,
     },
-  }, */
+  },
   upload: {
     config: {
       provider: "cloudinary",
