@@ -1,4 +1,4 @@
-import { Core } from "@strapi/strapi";
+// import { Core } from "@strapi/strapi";
 
 const paths = [
   "posts/hero/images",
@@ -10,7 +10,7 @@ const paths = [
   "profiles/photos",
 ];
 
-const createFoldersRecursively = async (path: string, strapi: Core.Strapi) => {
+const createFoldersRecursively = async (path: string, strapi) => {
   const parts = path.split("/");
   let parent = null;
 
@@ -18,14 +18,15 @@ const createFoldersRecursively = async (path: string, strapi: Core.Strapi) => {
     const pathName = `${parent?.name ?? ""}/${part}`;
 
     try {
-      const existingFolder = await strapi
-        .documents("plugin::upload.folder")
-        .findMany({
+      const existingFolder = await strapi.entityService.findMany(
+        "plugin::upload.folder",
+        {
           filters: {
             name: part,
             parent: parent?.id ?? null,
           },
-        });
+        }
+      );
 
       if (existingFolder.length === 0) {
         const folder = await strapi
@@ -55,7 +56,7 @@ const createFoldersRecursively = async (path: string, strapi: Core.Strapi) => {
   }
 };
 
-export const createMediaFolders = async (strapi: Core.Strapi) => {
+export const createMediaFolders = async (strapi) => {
   console.info("\nCreating media folders based on given paths.\n");
 
   for (const path of paths) {

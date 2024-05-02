@@ -2,6 +2,18 @@ export default ({ env }) => ({
   /*   seo: {
     enabled: true,
   }, */
+  transformer: {
+    enabled: true,
+    config: {
+      responseTransforms: {
+        removeAttributesKey: true,
+        removeDataKey: true,
+      },
+      requestTransforms: {
+        wrapBodyWithDataKey: true,
+      },
+    },
+  },
   upload: {
     config: {
       provider: "cloudinary",

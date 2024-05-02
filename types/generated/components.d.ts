@@ -1,38 +1,38 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface DataSocialNetworkCredentials extends Struct.ComponentSchema {
+export interface DataSocialNetworkCredentials extends Schema.Component {
   collectionName: 'components_data_social_network_credentials';
   info: {
     displayName: 'Social Network Credentials';
     icon: 'twitter';
   };
   attributes: {
-    facebook: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    facebook: Attribute.String &
+      Attribute.SetMinMaxLength<{
         minLength: 5;
       }>;
-    instagram: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    instagram: Attribute.String &
+      Attribute.SetMinMaxLength<{
         minLength: 5;
       }>;
-    linkedIn: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    linkedIn: Attribute.String &
+      Attribute.SetMinMaxLength<{
         minLength: 5;
       }>;
-    twitterCreator: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    twitterCreator: Attribute.String &
+      Attribute.SetMinMaxLength<{
         minLength: 5;
       }>;
-    twitterCreatorId: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    twitterCreatorId: Attribute.String &
+      Attribute.SetMinMaxLength<{
         minLength: 5;
       }>;
   };
 }
 
-declare module '@strapi/strapi' {
-  export module Public {
-    export interface ComponentSchemas {
+declare module '@strapi/types' {
+  export module Shared {
+    export interface Components {
       'data.social-network-credentials': DataSocialNetworkCredentials;
     }
   }

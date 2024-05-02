@@ -1,4 +1,4 @@
-import { Core } from "@strapi/strapi";
+// import { Core } from "@strapi/strapi";
 
 type StrapiLocale = { code: string; name: string; isDefault?: boolean };
 
@@ -7,7 +7,7 @@ const locales: Array<StrapiLocale> = [
   { code: "tr", name: "Turkish (tr)" },
 ];
 
-async function addLocale(locale: StrapiLocale, strapi: Core.Strapi) {
+async function addLocale(locale: StrapiLocale, strapi) {
   const { code, name, isDefault = false } = locale;
 
   try {
@@ -31,7 +31,7 @@ async function addLocale(locale: StrapiLocale, strapi: Core.Strapi) {
   }
 }
 
-export const addLocales = async (strapi: Core.Strapi) => {
+export const addLocales = async (strapi) => {
   console.info("\nAdding given locales to the admin.\n");
 
   for (const locale of locales) {
