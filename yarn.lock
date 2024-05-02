@@ -15764,6 +15764,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strapi-plugin-transformer@npm:3.1.2":
+  version: 3.1.2
+  resolution: "strapi-plugin-transformer@npm:3.1.2"
+  peerDependencies:
+    "@strapi/strapi": ^4.0.7
+    lodash: ^4.17.21
+    yup: ^0.32.9
+  checksum: 10c0/0dca07edcb56a9e5b83b590c7f8a552607068f4a0e32cba56552443ef5638b37642d57ee0f7cf8e27d60429f134bfafb70303c1d1ad07c847ceec3eb4dfbc09e
+  languageName: node
+  linkType: hard
+
 "strapi-template@workspace:.":
   version: 0.0.0-use.local
   resolution: "strapi-template@workspace:."
@@ -15792,6 +15803,7 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-router-dom: "npm:5.3.4"
     semantic-release: "npm:23.0.8"
+    strapi-plugin-transformer: "npm:3.1.2"
     styled-components: "npm:5.3.11"
   languageName: unknown
   linkType: soft
