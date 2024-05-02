@@ -1,5 +1,12 @@
 # Releases
 
+## [1.0.1](https://github.com/SalahAdDin/strapi-template/compare/v1.0.0...v1.0.1) (2024-04-29)
+
+
+### Bug Fixes
+
+* disabling addLocales function on bootstrap ([2ea8b06](https://github.com/SalahAdDin/strapi-template/commit/2ea8b065e18073d415c044790441991da712ac45))
+
 ## 1.0.0 (2024-04-27)
 
 
