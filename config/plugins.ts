@@ -49,6 +49,18 @@ export default ({ env }) => ({
       caching: true,
     },
   },
+  transformer: {
+    enabled: true,
+    config: {
+      responseTransforms: {
+        removeAttributesKey: true,
+        removeDataKey: true,
+      },
+      requestTransforms: {
+        wrapBodyWithDataKey: true,
+      },
+    },
+  },
   upload: {
     config: {
       provider: "cloudinary",
