@@ -1,7 +1,55 @@
 export default ({ env }) => ({
-  /*   seo: {
+  navigation: {
     enabled: true,
-  }, */
+    config: {
+      allowedLevels: 2,
+      contentTypes: ["api::post.post"],
+      contentTypesNameFields: {
+        "api::post.post": ["title"],
+      },
+      i18nEnabled: true,
+      excludedContentTypes: ["plugins::", "strapi"],
+      pathDefaultFields: {
+        "api::post.post": ["slug"],
+      },
+    },
+  },
+  "preview-button": {
+    config: {
+      contentTypes: [
+        {
+          uid: "api::post.post",
+          draft: {
+            url: `${env("PUBLIC_DOMAIN_URL")}/api/preview`,
+            query: {
+              type: "post",
+              locale: "{locale}",
+              slug: "{slug}",
+              secret: env("STRAPI_PREVIEW_SECRET", ""),
+            },
+            openTarget: "_blank",
+          },
+          published: {
+            // can add extra segment, like "blog", when required
+            url: `${env("PUBLIC_DOMAIN_URL")}/{locale}/{slug}`,
+            openTarget: "_blank",
+          },
+        },
+      ],
+    },
+  },
+  seo: {
+    enabled: true,
+  },
+  sitemap: {
+    enabled: true,
+    config: {
+      cron: "* * * * 7",
+      xsl: true,
+      autoGenerate: false,
+      caching: true,
+    },
+  },
   transformer: {
     enabled: true,
     config: {

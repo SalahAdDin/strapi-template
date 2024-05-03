@@ -27,7 +27,12 @@ export default [
       },
     },
   },
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      headers: ["Strapi-Transformer-Ignore"],
+    },
+  },
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
