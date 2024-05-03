@@ -39,15 +39,18 @@
       "maxLength": 5
     },
     "hero": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "content": {
       "pluginOptions": {
@@ -75,6 +78,16 @@
       "relation": "manyToOne",
       "target": "api::profile.profile",
       "inversedBy": "posts"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
     }
   }
 }
