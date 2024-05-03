@@ -7,6 +7,7 @@ export default ({ env }) => ({
       contentTypesNameFields: {
         "api::post.post": ["title"],
       },
+      i18nEnabled: true,
       excludedContentTypes: ["plugins::", "strapi"],
       pathDefaultFields: {
         "api::post.post": ["slug"],
