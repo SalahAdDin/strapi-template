@@ -1,5 +1,12 @@
 # Releases
 
+## [1.0.2](https://github.com/SalahAdDin/strapi-template/compare/v1.0.1...v1.0.2) (2024-05-03)
+
+
+### Bug Fixes
+
+* moving development scrips to right section in documentation ([a2c4d49](https://github.com/SalahAdDin/strapi-template/commit/a2c4d498fee7a7f462f976eaea236309291ec9e9))
+
 ## [1.0.1](https://github.com/SalahAdDin/strapi-template/compare/v1.0.0...v1.0.1) (2024-04-29)
 
 
