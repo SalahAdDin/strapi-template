@@ -41,13 +41,15 @@ export default ({ env }) => ({
   seo: {
     enabled: true,
   },
-  sitemap: {
-    enabled: true,
-    config: {
-      cron: "* * * * 7",
-      xsl: true,
-      autoGenerate: false,
-      caching: true,
+  webtools: {
+    sitemap: {
+      enabled: true,
+      config: {
+        cron: "* * * * 7",
+        xsl: true,
+        autoGenerate: false,
+        caching: true,
+      },
     },
   },
   transformer: {
