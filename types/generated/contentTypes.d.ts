@@ -377,6 +377,9 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     i18n: {
       localized: true;
     };
+    webtools: {
+      enabled: true;
+    };
   };
   attributes: {
     title: Attribute.String &
@@ -435,6 +438,12 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    url_alias: Attribute.Relation<
+      'api::category.category',
+      'oneToOne',
+      'plugin::webtools.url-alias'
+    > &
+      Attribute.Unique;
     sitemap_exclude: Attribute.Boolean &
       Attribute.Private &
       Attribute.DefaultTo<false>;
@@ -461,6 +470,9 @@ export interface ApiPostPost extends Schema.CollectionType {
   pluginOptions: {
     i18n: {
       localized: true;
+    };
+    webtools: {
+      enabled: true;
     };
   };
   attributes: {
@@ -523,6 +535,12 @@ export interface ApiPostPost extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    url_alias: Attribute.Relation<
+      'api::post.post',
+      'oneToOne',
+      'plugin::webtools.url-alias'
+    > &
+      Attribute.Unique;
     sitemap_exclude: Attribute.Boolean &
       Attribute.Private &
       Attribute.DefaultTo<false>;
@@ -645,9 +663,6 @@ export interface ApiProfileProfile extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::profile.profile',
       'oneToMany',
@@ -668,6 +683,11 @@ export interface ApiTagTag extends Schema.CollectionType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    webtools: {
+      enabled: true;
+    };
+  };
   attributes: {
     label: Attribute.String &
       Attribute.Required &
@@ -683,6 +703,12 @@ export interface ApiTagTag extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    url_alias: Attribute.Relation<
+      'api::tag.tag',
+      'oneToOne',
+      'plugin::webtools.url-alias'
+    > &
+      Attribute.Unique;
     sitemap_exclude: Attribute.Boolean &
       Attribute.Private &
       Attribute.DefaultTo<false>;
@@ -750,9 +776,6 @@ export interface PluginUploadFile extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -867,9 +890,6 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -920,9 +940,6 @@ export interface PluginContentReleasesReleaseAction
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -955,9 +972,6 @@ export interface PluginNavigationAudience extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -1010,9 +1024,6 @@ export interface PluginNavigationNavigation extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -1091,9 +1102,6 @@ export interface PluginNavigationNavigationItem extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -1142,14 +1150,103 @@ export interface PluginNavigationNavigationsItemsRelated
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
-export interface PluginSitemapSitemap extends Schema.CollectionType {
-  collectionName: 'sitemap';
+export interface PluginWebtoolsUrlAlias extends Schema.CollectionType {
+  collectionName: 'wt_url_alias';
+  info: {
+    singularName: 'url-alias';
+    pluralName: 'url-alias';
+    displayName: 'url-alias';
+  };
+  options: {
+    draftAndPublish: false;
+    comment: '';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    url_path: Attribute.String & Attribute.Required & Attribute.Unique;
+    generated: Attribute.Boolean & Attribute.DefaultTo<true>;
+    contenttype: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::webtools.url-alias',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::webtools.url-alias',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'plugin::webtools.url-alias',
+      'oneToMany',
+      'plugin::webtools.url-alias'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface PluginWebtoolsUrlPattern extends Schema.CollectionType {
+  collectionName: 'wt_url_patterns';
+  info: {
+    singularName: 'url-pattern';
+    pluralName: 'url-patterns';
+    displayName: 'url-pattern';
+  };
+  options: {
+    draftAndPublish: false;
+    comment: '';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    label: Attribute.String & Attribute.Required;
+    pattern: Attribute.String & Attribute.Required;
+    code: Attribute.String & Attribute.Required & Attribute.Unique;
+    contenttype: Attribute.String & Attribute.Required;
+    languages: Attribute.JSON & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::webtools.url-pattern',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::webtools.url-pattern',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface PluginWebtoolsAddonSitemapSitemap
+  extends Schema.CollectionType {
+  collectionName: 'wt_sitemap';
   info: {
     singularName: 'sitemap';
     pluralName: 'sitemaps';
@@ -1178,54 +1275,13 @@ export interface PluginSitemapSitemap extends Schema.CollectionType {
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'plugin::sitemap.sitemap',
+      'plugin::webtools-addon-sitemap.sitemap',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'plugin::sitemap.sitemap',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface PluginSitemapSitemapCache extends Schema.CollectionType {
-  collectionName: 'sitemap_cache';
-  info: {
-    singularName: 'sitemap-cache';
-    pluralName: 'sitemap-caches';
-    displayName: 'sitemap-cache';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    sitemap_json: Attribute.JSON & Attribute.Required;
-    name: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    sitemap_id: Attribute.Integer & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::sitemap.sitemap-cache',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::sitemap.sitemap-cache',
+      'plugin::webtools-addon-sitemap.sitemap',
       'oneToOne',
       'admin::user'
     > &
@@ -1428,9 +1484,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    sitemap_exclude: Attribute.Boolean &
-      Attribute.Private &
-      Attribute.DefaultTo<false>;
   };
 }
 
@@ -1456,8 +1509,9 @@ declare module '@strapi/types' {
       'plugin::navigation.navigation': PluginNavigationNavigation;
       'plugin::navigation.navigation-item': PluginNavigationNavigationItem;
       'plugin::navigation.navigations-items-related': PluginNavigationNavigationsItemsRelated;
-      'plugin::sitemap.sitemap': PluginSitemapSitemap;
-      'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
+      'plugin::webtools.url-alias': PluginWebtoolsUrlAlias;
+      'plugin::webtools.url-pattern': PluginWebtoolsUrlPattern;
+      'plugin::webtools-addon-sitemap.sitemap': PluginWebtoolsAddonSitemapSitemap;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
