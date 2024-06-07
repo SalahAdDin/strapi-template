@@ -1,7 +1,6 @@
 import type { StrapiApp } from "@strapi/strapi/admin";
 import { registerTranslations } from "../functions/registerTranslations";
 
-const localesPath = "../admin/translations";
 const locales = [
   // 'ar',
   // 'fr',
@@ -32,7 +31,7 @@ const locales = [
   // 'zh',
 ];
 
-const translations = await registerTranslations({ locales, path: localesPath });
+const translations = await registerTranslations({ locales });
 
 export default {
   config: {
