@@ -33,6 +33,7 @@
   "content-manager.containers.ListPage.table-headers.updatedBy": "Tarafından Güncellendi",
   "content-manager.containers.ListPage.table-headers.category": "Sınıf",
   "content-manager.containers.ListPage.table-headers.posts": "Yayınlar",
+  "content-manager.containers.ListPage.table-headers.description": "Açıklama",
   "content-manager.containers.ListPage.table-headers.blocked": "Engellendi",
   "content-manager.containers.ListPage.table-headers.confirmed": "Onaylandı",
   "content-manager.containers.ListPage.table-headers.email": "E-Posta",
