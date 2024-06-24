@@ -39,16 +39,13 @@
       "type": "uid",
       "targetField": "title",
       "required": true,
-      "maxLength": 5
+      "minLength": 5
     },
     "hero": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "pluginOptions": {
         "i18n": {
           "localized": false
