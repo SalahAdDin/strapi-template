@@ -206,8 +206,8 @@ export interface PluginContentReleasesReleaseAction
   attributes: {
     type: Schema.Attribute.Enumeration<['publish', 'unpublish']> &
       Schema.Attribute.Required;
-    entry: Schema.Attribute.Relation<'morphToOne'>;
     contentType: Schema.Attribute.String & Schema.Attribute.Required;
+    entryDocumentId: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     release: Schema.Attribute.Relation<
       'manyToOne',
@@ -543,7 +543,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 5;
       }>;
-    hero: Schema.Attribute.Media &
+    hero: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -628,7 +628,7 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         minLength: 2;
       }>;
-    photo: Schema.Attribute.Media &
+    photo: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
