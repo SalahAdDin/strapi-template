@@ -23,7 +23,7 @@ For the current template we pick a set of plugins to add some features by defaul
 - [Navigation](https://github.com/VirtusLab-Open-Source/strapi-plugin-navigation): A plugin for Strapi Headless CMS that provides navigation / menu builder feature with their possibility to control the audience and different output structure renderers like (flat, tree and RFR - ready for handling by Redux First Router).
 - [Preview Button](https://github.com/mattmilburn/strapi-plugin-preview-button): A plugin for Strapi CMS that adds a preview button and live view button to the content manager edit and list view. It has an [PR candidate](https://github.com/mattmilburn/strapi-plugin-preview-button/pull/133/files) for Strapi 5 in development.
 - [SEO](https://github.com/strapi/strapi-plugin-seo): The official plugin to make your Strapi content SEO friendly. [We asked an update](https://github.com/strapi/strapi-plugin-seo/issues/70) for Strapi 5.
-- [Sitemap](https://github.com/pluginpal/strapi-plugin-sitemap): Generate a highly customizable sitemap XML in Strapi CMS.
+- [Sitemap](https://github.com/pluginpal/strapi-webtools/tree/master/packages/addons/sitemap): Generate a highly customizable sitemap XML in Strapi CMS. It requires to install the [Core Webtools](https://github.com/pluginpal/strapi-webtools/tree/master/packages/core) base plugin.
   
 We also recommend to check the following plugins when it is required:
 
