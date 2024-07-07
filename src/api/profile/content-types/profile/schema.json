@@ -24,6 +24,7 @@
       },
       "type": "string",
       "minLength": 5,
+      "maxLength": 50,
       "required": true
     },
     "slug": {
@@ -35,7 +36,8 @@
       "type": "uid",
       "targetField": "fullName",
       "required": true,
-      "maxLength": 5
+      "maxLength": 50,
+      "minLength": 5
     },
     "firstName": {
       "pluginOptions": {
@@ -62,9 +64,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "pluginOptions": {
         "i18n": {
           "localized": false

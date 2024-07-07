@@ -20,12 +20,15 @@
       "type": "string",
       "required": true,
       "unique": true,
+      "maxLength": 15,
       "minLength": 3
     },
     "slug": {
       "type": "uid",
       "targetField": "label",
-      "required": true
+      "required": true,
+      "maxLength": 15,
+      "minLength": 3
     },
     "posts": {
       "type": "relation",
