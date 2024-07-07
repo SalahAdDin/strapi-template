@@ -36,7 +36,7 @@
       "type": "uid",
       "targetField": "title",
       "required": true,
-      "maxLength": 5
+      "minLength": 5
     },
     "hero": {
       "allowedTypes": ["images", "videos"],
