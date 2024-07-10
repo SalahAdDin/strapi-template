@@ -17,15 +17,15 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.0.0-rc.0",
-    "@strapi/plugin-documentation": "5.0.0-rc.0",
-    "@strapi/plugin-users-permissions": "5.0.0-rc.0",
-    "@strapi/provider-upload-cloudinary": "5.0.0-rc.0",
-    "@strapi/strapi": "5.0.0-rc.0",
+    "@strapi/plugin-cloud": "5.0.0-rc.2",
+    "@strapi/plugin-documentation": "5.0.0-rc.2",
+    "@strapi/plugin-users-permissions": "5.0.0-rc.2",
+    "@strapi/provider-upload-cloudinary": "5.0.0-rc.2",
+    "@strapi/strapi": "5.0.0-rc.2",
     "pg": "8.12.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.24.0",
+    "react-router-dom": "6.24.1",
     "styled-components": "6.1.11"
   },
   "devDependencies": {
@@ -35,18 +35,18 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "10.0.6",
+    "@semantic-release/github": "10.1.0",
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.1",
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.10",
     "@types/pg": "8.11.6",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "better-sqlite3": "11.1.1",
+    "better-sqlite3": "11.1.2",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "husky": "9.0.11",
     "semantic-release": "24.0.0",
-    "typescript": "5.5.2"
+    "typescript": "5.5.3"
   },
   "packageManager": "yarn@4.3.1",
   "engines": {
