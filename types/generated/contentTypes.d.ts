@@ -392,6 +392,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       }> &
       Attribute.SetMinMaxLength<{
         minLength: 3;
+        maxLength: 15;
       }>;
     slug: Attribute.UID<'api::category.category', 'title'> &
       Attribute.Required &
@@ -402,6 +403,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       }> &
       Attribute.SetMinMaxLength<{
         minLength: 3;
+        maxLength: 15;
       }>;
     description: Attribute.Text &
       Attribute.Required &
@@ -495,9 +497,9 @@ export interface ApiPostPost extends Schema.CollectionType {
         };
       }> &
       Attribute.SetMinMaxLength<{
-        maxLength: 5;
+        minLength: 5;
       }>;
-    hero: Attribute.Media &
+    hero: Attribute.Media<'images' | 'videos'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -579,6 +581,7 @@ export interface ApiProfileProfile extends Schema.CollectionType {
       }> &
       Attribute.SetMinMaxLength<{
         minLength: 5;
+        maxLength: 50;
       }>;
     slug: Attribute.UID<'api::profile.profile', 'fullName'> &
       Attribute.Required &
@@ -588,7 +591,8 @@ export interface ApiProfileProfile extends Schema.CollectionType {
         };
       }> &
       Attribute.SetMinMaxLength<{
-        maxLength: 5;
+        minLength: 5;
+        maxLength: 50;
       }>;
     firstName: Attribute.String &
       Attribute.Required &
@@ -610,7 +614,7 @@ export interface ApiProfileProfile extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         minLength: 2;
       }>;
-    photo: Attribute.Media &
+    photo: Attribute.Media<'images'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -694,8 +698,14 @@ export interface ApiTagTag extends Schema.CollectionType {
       Attribute.Unique &
       Attribute.SetMinMaxLength<{
         minLength: 3;
+        maxLength: 15;
       }>;
-    slug: Attribute.UID<'api::tag.tag', 'label'> & Attribute.Required;
+    slug: Attribute.UID<'api::tag.tag', 'label'> &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 3;
+        maxLength: 15;
+      }>;
     posts: Attribute.Relation<'api::tag.tag', 'manyToMany', 'api::post.post'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1067,6 +1077,7 @@ export interface PluginNavigationNavigationItem extends Schema.CollectionType {
     menuAttached: Attribute.Boolean & Attribute.DefaultTo<false>;
     order: Attribute.Integer & Attribute.DefaultTo<0>;
     collapsed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    autoSync: Attribute.Boolean & Attribute.DefaultTo<true>;
     related: Attribute.Relation<
       'plugin::navigation.navigation-item',
       'oneToOne',
