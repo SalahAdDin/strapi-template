@@ -541,7 +541,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 5;
+        minLength: 5;
       }>;
     hero: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.Required &
