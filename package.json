@@ -29,13 +29,13 @@
     "styled-components": "6.1.11"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.3.0",
-    "@commitlint/config-conventional": "19.2.2",
-    "@commitlint/types": "19.0.3",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
+    "@commitlint/types": "19.5.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "10.1.0",
+    "@semantic-release/github": "10.3.4",
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.1",
     "@types/node": "20.14.10",
@@ -45,7 +45,7 @@
     "better-sqlite3": "11.1.2",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "husky": "9.0.11",
-    "semantic-release": "24.0.0",
+    "semantic-release": "24.1.1",
     "typescript": "5.5.3"
   },
   "packageManager": "yarn@4.3.1",
