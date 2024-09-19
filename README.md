@@ -23,7 +23,7 @@ Start your Strapi application with autoReload enabled. [Learn more](https://docs
 ```shell
 npm run develop
 # or
-yarn develop
+pnpm develop
 ```
 
 ### `start`
@@ -33,7 +33,7 @@ Start your Strapi application with autoReload disabled. [Learn more](https://doc
 ```shell
 npm run start
 # or
-yarn start
+pnpm start
 ```
 
 ### `build`
@@ -43,7 +43,7 @@ Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-
 ```shell
 npm run build
 # or
-yarn build
+pnpm build
 ```
 
 ## ⚙️ Deployment
