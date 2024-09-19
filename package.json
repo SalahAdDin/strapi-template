@@ -22,11 +22,11 @@
     "@strapi/plugin-users-permissions": "5.0.0",
     "@strapi/provider-upload-cloudinary": "5.0.0",
     "@strapi/strapi": "5.0.0",
-    "pg": "8.12.0",
+    "pg": "8.13.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.24.1",
-    "styled-components": "6.1.11"
+    "react-router-dom": "6.26.2",
+    "styled-components": "6.1.13"
   },
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
@@ -42,13 +42,12 @@
     "@types/pg": "8.11.10",
     "@types/react": "18.3.7",
     "@types/react-dom": "18.3.0",
-    "better-sqlite3": "11.1.2",
+    "better-sqlite3": "11.3.0",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "husky": "9.0.11",
     "semantic-release": "24.1.1",
     "typescript": "5.6.2"
   },
-  "packageManager": "yarn@4.3.1",
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
