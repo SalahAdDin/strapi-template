@@ -1,6 +1,6 @@
 import { Core } from "@strapi/strapi";
-import { createMediaFolders } from "./functions/createMediaFolders";
-import { addLocales } from "./functions/addLocales";
+import { createMediaFolders } from "./admin/functions/createMediaFolders";
+import { addLocales } from "./admin/functions/addLocales";
 
 export default {
   /**
