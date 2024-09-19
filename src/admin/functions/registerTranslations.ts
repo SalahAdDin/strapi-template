@@ -8,9 +8,7 @@ export const registerTranslations = async ({
   const results = await Promise.all(
     locales.map(async (locale) => {
       try {
-        const { default: data } = await import(
-          `../admin/translations/${locale}.json`
-        );
+        const { default: data } = await import(`@translations/${locale}.json`);
         return {
           locale,
           data,
