@@ -1,5 +1,5 @@
 import type { StrapiApp } from "@strapi/strapi/admin";
-import { registerTranslations } from "../functions/registerTranslations";
+import { registerTranslations } from "./functions/registerTranslations";
 
 const locales = [
   // 'ar',
