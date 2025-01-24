@@ -43,6 +43,7 @@
   "content-manager.content-types.api::profile.profile.biography": "Biyografi",
   "content-manager.content-types.api::profile.profile.socialNetworks": "Sosyal Medya",
   "content-manager.content-types.api::profile.profile.posts": "Yayınlar",
+  "content-manager.content-types.api::profile.profile.user": "Kullanıcı",
   "content-manager.content-types.api::profile.profile.createdAt": "'ta yaratılmıştı",
   "content-manager.content-types.api::profile.profile.createdBy": "Tarafından yaratılmıştı",
   "content-manager.content-types.api::profile.profile.updatedAt": "'ta güncellendi",

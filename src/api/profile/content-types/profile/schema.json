@@ -35,7 +35,7 @@
       "type": "uid",
       "targetField": "fullName",
       "required": true,
-      "maxLength": 5
+      "minLength": 5
     },
     "firstName": {
       "pluginOptions": {
@@ -59,15 +59,17 @@
       "required": true
     },
     "photo": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "eMail": {
       "pluginOptions": {
@@ -101,6 +103,12 @@
       "relation": "oneToMany",
       "target": "api::post.post",
       "mappedBy": "author"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user",
+      "private": true
     }
   }
 }

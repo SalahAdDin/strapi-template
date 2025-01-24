@@ -43,6 +43,7 @@
   "content-manager.content-types.api::profile.profile.biography": "Biografía",
   "content-manager.content-types.api::profile.profile.socialNetworks": "Redes sociales",
   "content-manager.content-types.api::profile.profile.posts": "Publicaciones",
+  "content-manager.content-types.api::profile.profile.user": "Usuario",
   "content-manager.content-types.api::profile.profile.createdAt": "Creado en",
   "content-manager.content-types.api::profile.profile.createdBy": "Creado por",
   "content-manager.content-types.api::profile.profile.updatedAt": "Actualizado en",
