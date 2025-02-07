@@ -28,7 +28,6 @@
   "content-manager.content-types.api::post.post.content": "Contenido",
   "content-manager.content-types.api::post.post.category": "Categoría",
   "content-manager.content-types.api::post.post.tags": "Etiquetas",
-  "content-manager.content-types.api::post.post.author": "Autor",
   "content-manager.content-types.api::post.post.createdAt": "Creado en",
   "content-manager.content-types.api::post.post.createdBy": "Creado por",
   "content-manager.content-types.api::post.post.updatedAt": "Actualizado en",

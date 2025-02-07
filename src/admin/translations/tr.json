@@ -28,7 +28,6 @@
   "content-manager.content-types.api::post.post.content": "İçerik",
   "content-manager.content-types.api::post.post.category": "Sınıf",
   "content-manager.content-types.api::post.post.tags": "Etiketler",
-  "content-manager.content-types.api::post.post.author": "Yazar",
   "content-manager.content-types.api::post.post.createdAt": "'ta yaratılmıştı",
   "content-manager.content-types.api::post.post.createdBy": "Tarafından yaratılmıştı",
   "content-manager.content-types.api::post.post.updatedAt": "'ta güncellendi",
