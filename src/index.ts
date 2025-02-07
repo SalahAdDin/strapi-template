@@ -1,6 +1,7 @@
 import { Core } from "@strapi/strapi";
-import { createMediaFolders } from "./admin/functions/createMediaFolders";
 import { addLocales } from "./admin/functions/addLocales";
+import { createMediaFolders } from "./admin/functions/createMediaFolders";
+import assignFullNameToSlug from "./middlewares/assignFullNameToSlug";
 
 export default {
   /**
@@ -9,7 +10,9 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register({ strapi }: { strapi: Core.Strapi }) {
+    assignFullNameToSlug({ strapi });
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

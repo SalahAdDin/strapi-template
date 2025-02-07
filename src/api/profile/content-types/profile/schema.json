@@ -16,16 +16,6 @@
     }
   },
   "attributes": {
-    "fullName": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string",
-      "minLength": 5,
-      "required": true
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -33,7 +23,7 @@
         }
       },
       "type": "uid",
-      "targetField": "fullName",
+      "targetField": "firstName",
       "required": true,
       "minLength": 5
     },
@@ -97,12 +87,6 @@
         }
       },
       "component": "data.social-network-credentials"
-    },
-    "posts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::post.post",
-      "mappedBy": "author"
     },
     "user": {
       "type": "relation",
