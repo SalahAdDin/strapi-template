@@ -2,6 +2,7 @@ import { Core } from "@strapi/strapi";
 import { addLocales } from "./admin/functions/addLocales";
 import { createMediaFolders } from "./admin/functions/createMediaFolders";
 import assignFullNameToSlug from "./utils/middlewares/documents/assignFullNameToSlug";
+import registerAdminMiddleware from "./utils/middlewares/registerAdminMiddleware";
 
 export default {
   /**
@@ -12,6 +13,7 @@ export default {
    */
   register({ strapi }: { strapi: Core.Strapi }) {
     assignFullNameToSlug({ strapi });
+    registerAdminMiddleware({ strapi });
   },
 
   /**
