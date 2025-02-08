@@ -1,5 +1,5 @@
 /**
- * `assignFullNameToSlug` middleware
+ * `assignFullNameToSlug` document middleware
  */
 
 import type { Core } from "@strapi/strapi";

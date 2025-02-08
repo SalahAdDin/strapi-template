@@ -1,7 +1,7 @@
 import { Core } from "@strapi/strapi";
 import { addLocales } from "./admin/functions/addLocales";
 import { createMediaFolders } from "./admin/functions/createMediaFolders";
-import assignFullNameToSlug from "./middlewares/assignFullNameToSlug";
+import assignFullNameToSlug from "./utils/middlewares/documents/assignFullNameToSlug";
 
 export default {
   /**
