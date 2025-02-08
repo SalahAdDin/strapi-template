@@ -24,7 +24,7 @@ export default (_config, { strapi }: { strapi: Core.Strapi }) => {
 
       await Promise.all(userIds.map(deleteProfile));
     } catch (error) {
-      strapi.log.error("Unable to delete admin profiles:", error);
+      strapi.log.error("Unable to delete admin profiles: \n", error);
     }
 
     await next();

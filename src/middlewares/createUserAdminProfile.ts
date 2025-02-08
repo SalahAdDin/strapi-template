@@ -22,7 +22,7 @@ export default (_config, { strapi }: { strapi: Core.Strapi }) => {
         },
       });
     } catch (error) {
-      strapi.log.error("Unable to create admin profile. \n", error);
+      strapi.log.error("Unable to create admin profile: \n", error);
     }
   };
 };
