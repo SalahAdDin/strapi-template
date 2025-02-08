@@ -1,4 +1,4 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
 export interface DataSocialNetworkCredentials extends Struct.ComponentSchema {
   collectionName: 'components_data_social_network_credentials';
