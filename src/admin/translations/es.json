@@ -13,6 +13,21 @@
   "content-manager.components.data.social-network-credentials.twitterCreator": "Creador Twitter",
   "content-manager.components.data.social-network-credentials.twitterCreatorId": "ID Creador Twitter",
 
+  "content-manager.components.shared.seo.canonicalURL": "URL Canónica",
+  "content-manager.components.shared.seo.keywords": "Palabras Clave",
+  "content-manager.components.shared.seo.metaDescription": "Meta Descripción",
+  "content-manager.components.shared.seo.metaTitle": "Meta Título",
+  "content-manager.components.shared.seo.metaImage": "Meta Imagen",
+  "content-manager.components.shared.seo.metaRobots": "Meta Robots",
+  "content-manager.components.shared.seo.metaViewport": "Meta Ventana Gráfica",
+  "content-manager.components.shared.seo.openGraph": "OpenGraph",
+  "content-manager.components.shared.seo.structuredData": "Data Estructurada",
+  "content-manager.components.shared.open-graph.ogType": "Tipo OG",
+  "content-manager.components.shared.open-graph.ogTitle": "Título OG",
+  "content-manager.components.shared.open-graph.ogImage": "Imagen OG",
+  "content-manager.components.shared.open-graph.ogUrl": "URL OG",
+  "content-manager.components.shared.open-graph.ogDescription": "Descripción OG",
+
   "content-manager.content-types.api::category.category.title": "Título",
   "content-manager.content-types.api::category.category.slug": "Marquilla",
   "content-manager.content-types.api::category.category.description": "Descripción",
@@ -21,6 +36,7 @@
   "content-manager.content-types.api::category.category.createdBy": "Creado por",
   "content-manager.content-types.api::category.category.updatedAt": "Actualizado en",
   "content-manager.content-types.api::category.category.updatedBy": "Actualizado por",
+  "content-manager.content-types.api::category.category.seo": "SEO",
 
   "content-manager.content-types.api::post.post.title": "Título",
   "content-manager.content-types.api::post.post.slug": "Marquilla",
@@ -32,6 +48,7 @@
   "content-manager.content-types.api::post.post.createdBy": "Creado por",
   "content-manager.content-types.api::post.post.updatedAt": "Actualizado en",
   "content-manager.content-types.api::post.post.updatedBy": "Actualizado por",
+  "content-manager.content-types.api::post.post.seo": "SEO",
 
   "content-manager.content-types.api::profile.profile.fullName": "Nombre completo",
   "content-manager.content-types.api::profile.profile.slug": "Marquilla",
@@ -47,6 +64,7 @@
   "content-manager.content-types.api::profile.profile.createdBy": "Creado por",
   "content-manager.content-types.api::profile.profile.updatedAt": "Actualizado en",
   "content-manager.content-types.api::profile.profile.updatedBy": "Actualizado por",
+  "content-manager.content-types.api::profile.profile.seo": "SEO",
 
   "content-manager.content-types.api::tag.tag.label": "Rótulo",
   "content-manager.content-types.api::tag.tag.slug": "Marquilla",
@@ -55,6 +73,7 @@
   "content-manager.content-types.api::tag.tag.createdBy": "Creado por",
   "content-manager.content-types.api::tag.tag.updatedAt": "Actualizado en",
   "content-manager.content-types.api::tag.tag.updatedBy": "Actualizado por",
+  "content-manager.content-types.api::tag.tag.seo": "SEO",
 
   "content-manager.content-types.plugin::users-permissions.user.username": "Nombre de Usuario",
   "content-manager.content-types.plugin::users-permissions.user.email": "Correo electrónico",

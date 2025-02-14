@@ -13,6 +13,21 @@
   "content-manager.components.data.social-network-credentials.twitterCreator": "Twitter Oluşturucu",
   "content-manager.components.data.social-network-credentials.twitterCreatorId": "Twitter Oluşturucu Kimliği",
 
+  "content-manager.components.shared.seo.canonicalURL": "Kanonik URL",
+  "content-manager.components.shared.seo.keywords": "Anahtar Kelimeler",
+  "content-manager.components.shared.seo.metaDescription": "Meta Açıklaması",
+  "content-manager.components.shared.seo.metaTitle": "Meta Başlığı",
+  "content-manager.components.shared.seo.metaImage": "Meta Görseli",
+  "content-manager.components.shared.seo.metaRobots": "Meta Robotlar",
+  "content-manager.components.shared.seo.metaViewport": "Meta Görüntüleme Alanı",
+  "content-manager.components.shared.seo.openGraph": "OpenGraph",
+  "content-manager.components.shared.seo.structuredData": "Yapılandırılmış Veri",
+  "content-manager.components.shared.open-graph.ogType": "OG Türü",
+  "content-manager.components.shared.open-graph.ogTitle": "OG Başlığı",
+  "content-manager.components.shared.open-graph.ogImage": "OG Görseli",
+  "content-manager.components.shared.open-graph.ogUrl": "OG URL",
+  "content-manager.components.shared.open-graph.ogDescription": "OG Açıklaması",
+
   "content-manager.content-types.api::category.category.title": "Başlık",
   "content-manager.content-types.api::category.category.slug": "Kurşun",
   "content-manager.content-types.api::category.category.description": "Açıklama",
@@ -21,6 +36,7 @@
   "content-manager.content-types.api::category.category.createdBy": "Tarafından yaratılmıştı",
   "content-manager.content-types.api::category.category.updatedAt": "'ta güncellendi",
   "content-manager.content-types.api::category.category.updatedBy": "Tarafından güncellendi",
+  "content-manager.content-types.api::category.category.seo": "SEO",
 
   "content-manager.content-types.api::post.post.title": "Başlık",
   "content-manager.content-types.api::post.post.slug": "Kurşun",
@@ -32,6 +48,7 @@
   "content-manager.content-types.api::post.post.createdBy": "Tarafından yaratılmıştı",
   "content-manager.content-types.api::post.post.updatedAt": "'ta güncellendi",
   "content-manager.content-types.api::post.post.updatedBy": "Tarafından güncellendi",
+  "content-manager.content-types.api::post.post.seo": "SEO",
 
   "content-manager.content-types.api::profile.profile.fullName": "Tam ad",
   "content-manager.content-types.api::profile.profile.slug": "Kurşun",
@@ -47,6 +64,7 @@
   "content-manager.content-types.api::profile.profile.createdBy": "Tarafından yaratılmıştı",
   "content-manager.content-types.api::profile.profile.updatedAt": "'ta güncellendi",
   "content-manager.content-types.api::profile.profile.updatedBy": "Tarafından güncellendi",
+  "content-manager.content-types.api::profile.profile.seo": "SEO",
 
   "content-manager.content-types.api::tag.tag.label": "Etiket",
   "content-manager.content-types.api::tag.tag.slug": "Kurşun",
@@ -55,6 +73,7 @@
   "content-manager.content-types.api::tag.tag.createdBy": "Tarafından yaratılmıştı",
   "content-manager.content-types.api::tag.tag.updatedAt": "'ta güncellendi",
   "content-manager.content-types.api::tag.tag.updatedBy": "Tarafından güncellendi",
+  "content-manager.content-types.api::tag.tag.seo": "SEO",
 
   "content-manager.content-types.plugin::users-permissions.user.username": "Kullanıcı adı",
   "content-manager.content-types.plugin::users-permissions.user.email": "E-posta",

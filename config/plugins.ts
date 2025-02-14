@@ -1,7 +1,7 @@
 export default ({ env }) => ({
-  /*   seo: {
+  seo: {
     enabled: true,
-  }, */
+  },
   upload: {
     config: {
       provider: "cloudinary",
