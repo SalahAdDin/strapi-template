@@ -384,6 +384,9 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     i18n: {
       localized: true;
     };
+    'preview-button': {
+      listViewColumn: true;
+    };
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -453,6 +456,9 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
   pluginOptions: {
     i18n: {
       localized: true;
+    };
+    'preview-button': {
+      listViewColumn: true;
     };
   };
   attributes: {
@@ -525,6 +531,9 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
   pluginOptions: {
     i18n: {
       localized: true;
+    };
+    'preview-button': {
+      listViewColumn: true;
     };
   };
   attributes: {
