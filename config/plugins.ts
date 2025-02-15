@@ -20,7 +20,9 @@ export default ({ env }) => ({
       },
     },
   },
+  /*
   webtools: {
     enabled: true,
   },
+  */
 });
