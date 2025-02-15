@@ -5,7 +5,6 @@ export default ({ env }) => ({
   seo: {
     enabled: true,
   },
-  /*
   upload: {
     config: {
       provider: "cloudinary",
@@ -24,5 +23,4 @@ export default ({ env }) => ({
   webtools: {
     enabled: true,
   },
-  */
 });
