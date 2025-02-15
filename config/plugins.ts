@@ -1,7 +1,11 @@
 export default ({ env }) => ({
+  navigation: {
+    enabled: true,
+  },
   seo: {
     enabled: true,
   },
+  /*
   upload: {
     config: {
       provider: "cloudinary",
@@ -17,4 +21,8 @@ export default ({ env }) => ({
       },
     },
   },
+  webtools: {
+    enabled: true,
+  },
+  */
 });
