@@ -17,12 +17,12 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.10.2",
-    "@strapi/plugin-documentation": "5.10.2",
+    "@strapi/plugin-cloud": "5.10.3",
+    "@strapi/plugin-documentation": "5.10.3",
     "@strapi/plugin-seo": "2.0.8",
-    "@strapi/plugin-users-permissions": "5.10.2",
-    "@strapi/provider-upload-cloudinary": "5.10.2",
-    "@strapi/strapi": "5.10.2",
+    "@strapi/plugin-users-permissions": "5.10.3",
+    "@strapi/provider-upload-cloudinary": "5.10.3",
+    "@strapi/strapi": "5.10.3",
     "pg": "8.13.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
