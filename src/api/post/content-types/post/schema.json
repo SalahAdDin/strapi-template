@@ -16,6 +16,9 @@
     },
     "preview-button": {
       "listViewColumn": true
+    },
+    "webtools": {
+      "enabled": true
     }
   },
   "attributes": {
@@ -45,7 +48,10 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images", "videos"],
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
