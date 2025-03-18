@@ -13,23 +13,26 @@
     "develop": "strapi develop",
     "prepare": "husky",
     "release": "semantic-release --dry-run --no-ci",
+    "sitemap": "strapi-sitemap",
     "start": "strapi start",
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.10.3",
-    "@strapi/plugin-documentation": "5.10.3",
+    "@strapi/plugin-cloud": "5.10.4",
+    "@strapi/plugin-documentation": "5.10.4",
     "@strapi/plugin-seo": "2.0.8",
-    "@strapi/plugin-users-permissions": "5.10.3",
-    "@strapi/provider-upload-cloudinary": "5.10.3",
-    "@strapi/strapi": "5.10.3",
+    "@strapi/plugin-users-permissions": "5.10.4",
+    "@strapi/provider-upload-cloudinary": "5.10.4",
+    "@strapi/strapi": "5.10.4",
     "pg": "8.13.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "6.26.2",
-    "strapi-plugin-navigation": "3.0.7",
+    "strapi-plugin-navigation": "3.0.9",
     "strapi-plugin-preview-button": "3.0.0",
-    "styled-components": "6.1.15"
+    "strapi-plugin-webtools": "1.0.1",
+    "styled-components": "6.1.15",
+    "webtools-addon-sitemap": "1.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "19.7.1",
