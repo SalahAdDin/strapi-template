@@ -1,65 +1,79 @@
 {
   "name": "strapi-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "A Strapi application",
-  "license": "MIT",
   "author": {
-    "name": "A Strapi developer"
+    "name": "José Luis Sandoval Alaguna"
   },
   "scripts": {
     "build": "strapi build",
     "commit:lint": "commitlint",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
     "develop": "strapi develop",
     "prepare": "husky",
     "release": "semantic-release --dry-run --no-ci",
-    "sitemap": "strapi-sitemap",
     "start": "strapi start",
-    "strapi": "strapi"
+    "sitemap": "strapi-sitemap",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.10.4",
-    "@strapi/plugin-documentation": "5.10.4",
+    "@strapi/plugin-cloud": "5.23.0",
     "@strapi/plugin-seo": "2.0.8",
-    "@strapi/plugin-users-permissions": "5.10.4",
-    "@strapi/provider-upload-cloudinary": "5.10.4",
-    "@strapi/strapi": "5.10.4",
-    "pg": "8.13.3",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "@strapi/plugin-users-permissions": "5.23.0",
+    "@strapi/strapi": "5.23.0",
+    "pg": "8.16.3",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-router-dom": "6.26.2",
-    "strapi-plugin-navigation": "3.0.9",
-    "strapi-plugin-preview-button": "3.0.0",
-    "strapi-plugin-webtools": "1.0.1",
-    "styled-components": "6.1.15",
-    "webtools-addon-sitemap": "1.0.0"
+    "strapi-plugin-navigation": "3.2.3",
+    "strapi-plugin-preview-button": "3.0.2",
+    "strapi-plugin-webtools": "1.5.3",
+    "styled-components": "6.1.19",
+    "webtools-addon-sitemap": "1.2.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.7.1",
-    "@commitlint/config-conventional": "19.7.1",
-    "@commitlint/types": "19.5.0",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/types": "19.8.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "11.0.1",
-    "@semantic-release/npm": "12.0.1",
+    "@semantic-release/github": "11.0.4",
+    "@semantic-release/npm": "12.0.2",
     "@semantic-release/release-notes-generator": "14.0.3",
-    "@types/node": "22.13.5",
-    "@types/pg": "8.11.11",
-    "@types/react": "18.3.7",
-    "@types/react-dom": "18.3.0",
-    "better-sqlite3": "11.8.1",
-    "conventional-changelog-conventionalcommits": "8.0.0",
+    "@types/node": "24.3.0",
+    "@types/pg": "8.15.5",
+    "@types/react": "18.2.23",
+    "@types/react-dom": "18.3.7",
+    "better-sqlite3": "12.2.0",
+    "conventional-changelog-conventionalcommits": "9.1.0",
     "husky": "9.1.7",
-    "semantic-release": "24.2.3",
-    "typescript": "5.7.3"
+    "semantic-release": "24.2.7",
+    "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@10.5.0",
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "6e3df431-f821-4bb9-8f0d-dd32c4b2d686"
+    "uuid": "27e5fe54-e3f6-4c3e-aad9-2f1e2d5a5e1b",
+    "installId": "4cb3aaf8ca61878097dc5bf9bc7585fa2af500b5994c62bfeab30d6bc152c51a"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "better-sqlite3",
+      "core-js-pure",
+      "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
